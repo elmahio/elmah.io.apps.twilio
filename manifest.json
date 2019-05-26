@@ -37,7 +37,12 @@
 			"url": "https://api.twilio.com/2010-04-01/Accounts/$sid/Messages.json",
 			"method": "post",
 			"contentType": "application/x-www-form-urlencoded",
-			"body": "Body=New $severity in $logName: $message&To=$to&From=&from"
+			"body": "Body=New $severity in $logName: $message&To=$to&From=&from",
+			"authentication": {
+				"type": "basic",
+				"username": "$sid",
+				"password": "$token"
+			}
 		}
 	}
 }
