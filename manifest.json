@@ -22,7 +22,7 @@
 		"type": "text",
 		"required": true
 	},{
-		"key": "token",
+		"key": "password",
 		"name": "Account Token",
 		"description": "The Account Token from Twilio",
 		"example": "540x0x0xx0000x0000x00000000x0x00",
@@ -41,7 +41,7 @@
 			"authentication": {
 				"type": "basic",
 				"username": "$sid",
-				"password": "$token"
+				"password": "$password"
 			}
 		}
 	}
