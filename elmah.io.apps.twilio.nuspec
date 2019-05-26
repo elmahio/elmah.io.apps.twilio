@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <version>$version$</version>
+    <authors>elmah.io</authors>
+    <owners>elmah.io</owners>
+    <id>elmah.io.apps.twilio</id>
+    <title>Twilio Integration</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Send SMS messages through Twilio when new  errors occur on elmah.io.</description>
+    <projectUrl>https://github.com/elmahio/elmah.io.apps.twilio</projectUrl>
+    <iconUrl>https://elmah.io/images/appstore/elmah.io.apps.twilio.png</iconUrl>
+    <tags>Error Exception Reporting Management Logging ELMAH Diagnostics Tracing Twilio</tags>
+  </metadata>
+  <files>
+    <file src="manifest.json" target="manifest.json" />
+  </files>
+</package>

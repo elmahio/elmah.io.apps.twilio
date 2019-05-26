@@ -1,0 +1,43 @@
+{
+	"helpUrl": "https://docs.elmah.io/elmah-io-apps-twilio/",
+	"variables": [{
+		"key": "from",
+		"name": "From",
+		"description": "The phone number to send the message from",
+		"example": "+12762121885",
+		"type": "text",
+		"required": true
+	},{
+		"key": "to",
+		"name": "To",
+		"description": "The phone number to send the message to",
+		"example": "+12762121885",
+		"type": "text",
+		"required": true
+	},{
+		"key": "sid",
+		"name": "Account SID",
+		"description": "The Account SID from Twilio",
+		"example": "AX0x000x000x00x0x00x0000000x000000",
+		"type": "text",
+		"required": true
+	},{
+		"key": "token",
+		"name": "Account Token",
+		"description": "The Account Token from Twilio",
+		"example": "540x0x0xx0000x0000x00000000x0x00",
+		"type": "text",
+		"required": true
+	}],
+	"rule": {
+		"title": "Send a SMS message on all new errors",
+		"query": "(isNew:true AND (severity:Error OR severity:Fatal)) OR applicationName:\"Uptime Monitoring\"",
+		"then": {
+			"type": "http",
+			"url": "https://api.twilio.com/2010-04-01/Accounts/$sid/Messages.json",
+			"method": "post",
+			"contentType": "application/x-www-form-urlencoded",
+			"body": "Body=New $severity in $logName: $message&To=$to&From=&from"
+		}
+	}
+}
