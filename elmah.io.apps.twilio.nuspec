@@ -8,7 +8,8 @@
     <title>Twilio Integration</title>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Send SMS messages through Twilio when new  errors occur on elmah.io.</description>
-    <projectUrl>https://github.com/elmahio/elmah.io.apps.twilio</projectUrl>
+    <projectUrl>https://elmah.io/</projectUrl>
+    <repository type="git" url="https://github.com/elmahio/elmah.io.apps.twilio" />
     <iconUrl>https://elmah.io/images/appstore/elmah.io.apps.twilio.png</iconUrl>
     <tags>Error Exception Reporting Management Logging ELMAH Diagnostics Tracing Twilio</tags>
   </metadata>
