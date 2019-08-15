@@ -6,6 +6,7 @@
     <owners>elmah.io</owners>
     <id>elmah.io.apps.twilio</id>
     <title>Twilio Integration</title>
+    <license type="expression">Apache-2.0</license>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Send SMS messages through Twilio when new  errors occur on elmah.io.</description>
     <projectUrl>https://elmah.io/</projectUrl>
