@@ -28,10 +28,22 @@
 		"example": "540x0x0xx0000x0000x00000000x0x00",
 		"type": "text",
 		"required": true
+	},{
+		"key": "uptimeEnabled",
+		"name": "Uptime Monitoring",
+		"description": "Include both errors and information messages from Uptime Monitoring",
+		"type": "bool",
+		"default": "true"
+	},{
+		"key": "heartbeatEnabled",
+		"name": "Heartbeats",
+		"description": "Include both errors and information messages from Heartbeats",
+		"type": "bool",
+		"default": "true"
 	}],
 	"rule": {
 		"title": "Send a SMS message on all new errors",
-		"query": "(isNew:true AND (severity:Error OR severity:Fatal)) OR applicationName:\"Uptime Monitoring\"",
+		"query": "(isNew:true AND (severity:Error OR severity:Fatal)) OR isUptime:$uptimeEnabled OR isHeartbeat:$heartbeatEnabled",
 		"then": {
 			"type": "http",
 			"url": "https://api.twilio.com/2010-04-01/Accounts/$sid/Messages.json",
